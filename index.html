@@ -15,23 +15,23 @@
         <h1>Phil D.</h1>
         <h2>AI Safety Research Engineer</h2>
         <p>
-        Creator of <a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener noreferrer"><strong>Project Z</strong></a>,
-        an automated red-teaming and safety evaluation framework for frontier AI models. The framework
-        is designed to assess how advanced multimodal and language systems behave under real-world conditions,
-        with a focus on surfacing hidden reliability and safety issues.
+          Creator of <a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener noreferrer"><strong>Project Z</strong></a>,
+          an automated red-teaming and safety evaluation framework for frontier AI models. The framework
+          is designed to assess how advanced multimodal and language systems behave under real-world conditions,
+          with a focus on surfacing hidden reliability and safety issues.
         </p>
         <p>
-        Phase 1 uses vision-language models (VLMs) such as CLIP and LLaVA as
-        tractable testbeds, expanding toward frontier multilingual and reasoning systems.
+          Phase 1 uses vision-language models (VLMs) such as CLIP and LLaVA as
+          tractable testbeds, expanding toward frontier multilingual and reasoning systems.
         </p>
         <p>
-        My work bridges AI safety research with production engineering—building reliable evaluation
-        pipelines and safety-critical systems.
+          My work bridges AI safety research with production engineering—building reliable evaluation
+          pipelines and safety-critical systems.
         </p>
         <p>
-        Pursuing dual-degree Master of Science in Engineering (MSE) in Robotics and
-        Computer and Information Science at the University of Pennsylvania (<a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Lab</a>),
-        graduating May 2026.
+          Pursuing dual-degree Master of Science in Engineering (MSE) in Robotics and
+          Computer and Information Science at the University of Pennsylvania (<a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Lab</a>),
+          graduating May 2026.
         </p>
     </div>
     </header>
@@ -49,15 +49,6 @@
       <p class="muted">
         Developing automated red-teaming infrastructure for systematic safety evaluation of frontier models,
         with production-grade CLIP and LLaVA evaluations complete as Phase 1 testbeds.
-      </p>
-    </div>
-
-    <div class="block">
-      <strong>Creator — Prompt-based Editing Benchmark</strong><br />
-      <em>Systematic Evaluation Framework for Image Generation Models</em>
-      <p class="muted">
-        Developing a benchmark for instruction-guided image editing models (InstructPix2Pix, Stable Diffusion Inpainting) 
-        to identify capability limitations and failure modes.
       </p>
     </div>
 
@@ -107,11 +98,27 @@
 
     <div class="grid">
       <figure>
+        <img src="editing_benchmark_demo.gif" alt="Editing benchmark demo" width="350" height="225" />
+        <figcaption>Prompt-based Editing Safety Benchmark</figcaption>
+        <p class="caption muted">
+          Developing a benchmark for instruction-guided image editing models (InstructPix2Pix, Stable Diffusion Inpainting) 
+          to identify capability limitations and failure modes.
+        </p>
+      </figure>
+
+      <figure>
         <img src="positioning_perspective_demo.gif" alt="Positioning perspective demo" width="350" height="225" />
         <img src="positioning_map_demo.gif" alt="Positioning map demo" width="350" height="225" />
         <figcaption>Real-time Positioning for Robots</figcaption>
         <p class="caption muted">
           Developed a real-time object positioning system using monocular cameras.
+        </p>
+      </figure>
+
+      <figure>
+        <figcaption>LLM Safety Fine-Tuning (LoRA SFT; DPO-ready)</figcaption>
+        <p class="caption muted">
+          LoRA-tuned TinyLlama-1.1B on Anthropic HH to improve safety refusals, with deterministic harmful-prompt eval and lightweight guardrails (harm/PII checks, sanitized logs); DPO-ready.
         </p>
       </figure>
 
