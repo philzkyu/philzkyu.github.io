@@ -15,12 +15,13 @@
         <h1>Phil D.</h1>
         <h2>AI Safety Research Engineer</h2>
         <p>
-          AI Safety Research Engineer specializing in adversarial evaluation and scalable ML systems for frontier models.
+          AI Safety Research Engineer specializing in adversarial evaluation and scalable ML systems.
           Creator of <a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener noreferrer"><strong>Project Z</strong></a>,
-          a production-grade red-teaming framework combining adversarial perturbations, multi-signal and reasoning failure
-          classifiers, semantic auditing, and interpretable risk scoring. Strong background in distributed evaluation pipelines
-          and safety-critical perception systems, with experience in fine-tuning safeguards. Pursuing a dual-degree MSE in
-          Robotics and Computer & Information Science at Penn (<a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Lab</a>), graduating May 2026.
+          a production-grade red-teaming framework that combines adversarial perturbations, multi-signal and reasoning failure
+          classifiers, semantic auditing, and interpretable risk scoring. Experienced in distributed evaluation pipelines,
+          ML infrastructure, and safety-critical perception systems, with additional work in fine-tuning safeguards and
+          safety benchmarks. Pursuing a dual-degree MSE in Robotics and Computer & Information Science at Penn (<a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Lab</a>),
+          graduating May 2026.
         </p>
     </div>
     </header>
@@ -36,9 +37,8 @@
       (<a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener">One-page summary</a>)<br />
       <em>Automated Red-Teaming &amp; Safety Evaluation Framework for Frontier Models</em>
       <p class="muted">
-        Developing automated red-teaming infrastructure for systematic safety evaluation of frontier AI models. 
-        Phase 1 includes production-grade evaluations of CLIP and LLaVA as tractable testbeds, with extensions
-        toward frontier multimodal and reasoning systems.
+      Developing a production-grade red-teaming framework and reproducible evaluation suite for frontier multimodal models.
+
       </p>
     </div>
 
@@ -84,74 +84,109 @@
 
   <!-- Selected Projects -->
   <section class="section">
-    <h2>Selected Projects &amp; Demos</h2>
+  <h2>Selected Projects &amp; Demos</h2>
 
-    <div class="grid">
-      <figure>
-        <img src="prompt_editing_benchmark_demo.gif" alt="Prompt editing benchmark demo" width="350" height="225" />
-        <figcaption>Prompt-based Editing Safety Benchmark</figcaption>
-        <p class="caption muted">
-          Developing a benchmark for instruction-guided image editing models (InstructPix2Pix, Stable Diffusion Inpainting) 
-          to identify capability limitations and failure modes.
+    <!-- Project row -->
+    <article class="project">
+      <div class="project-media">
+        <img src="prompt_editing_benchmark_demo.gif" alt="Prompt editing visual benchmark demo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Prompt-based Editing Safety Benchmark</h3>
+        <p class="muted">
+          Built a reproducible benchmark to reveal safety and capability failures in instruction-guided image editing models.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <img src="positioning_perspective_demo.gif" alt="Positioning perspective demo" width="350" height="225" />
-        <img src="positioning_map_demo.gif" alt="Positioning map demo" width="350" height="225" />
-        <figcaption>Real-time Positioning for Robots</figcaption>
-        <p class="caption muted">
-          Developed a real-time object positioning system using monocular cameras.
+    <!-- Project row with two GIFs (use a mini grid) -->
+    <article class="project">
+      <div class="project-media">
+        <div class="media-grid">
+          <img src="positioning_perspective_demo.gif" alt="Positioning perspective demo" />
+          <img src="positioning_map_demo.gif" alt="Positioning map demo" />
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Real-time Positioning for Robots</h3>
+        <p class="muted">Designed a monocular-camera system for accurate real-time object positioning in robotic environments.</p>
+      </div>
+    </article>
+
+    <!-- Text-only project (no GIF) -->
+    <article class="project">
+      <div class="project-media"></div>
+      <div class="project-content">
+        <h3 class="project-title">LLM Safety Fine-Tuning (LoRA SFT; DPO-ready)</h3>
+        <p class="muted">
+          Fine-tuned TinyLlama-1.1B on safety data to strengthen refusals and prepare a lightweight pipeline for DPO.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <figcaption>LLM Safety Fine-Tuning (LoRA SFT; DPO-ready)</figcaption>
-        <p class="caption muted">
-           Fine-tuned TinyLlama-1.1B with LoRA on the Anthropic HH dataset to strengthen safety refusals, 
-  adding lightweight guardrails (harm/PII filters, standardized refusals, safe logging) and preparing the pipeline for DPO.
-
-      <figure>
-        <img src="lane_detection_night_demo.gif" alt="Lane detection night demo" width="350" height="225" />
-        <img src="lane_detection_day_demo.gif" alt="Lane detection day demo" width="350" height="225" />
-        <figcaption>Lane Detection for Autonomous Vehicles</figcaption>
-        <p class="caption muted">
-          Trained a transformer-based model to detect and segment lane markers.
+    <!-- Example with two lane GIFs -->
+    <article class="project">
+      <div class="project-media">
+        <div class="media-grid">
+          <img src="lane_detection_night_demo.gif" alt="Lane detection night demo" />
+          <img src="lane_detection_day_demo.gif" alt="Lane detection day demo" />
+        </div>
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Lane Detection for Autonomous Vehicles</h3>
+        <p class="muted">
+          Trained a transformer model for robust lane segmentation across day and night driving conditions.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <img src="techvest_demo.gif" alt="Techvest demo" width="350" height="225" />
-        <figcaption>VitalTech SmartVest</figcaption>
-        <p class="caption muted">
-          Wearable prototype for biometric monitoring (movement/orientation, temperature, heart rate) during exercise.
+    <article class="project">
+      <div class="project-media">
+        <img src="techvest_demo.gif" alt="VitalTech SmartVest demo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">VitalTech SmartVest</h3>
+        <p class="muted">
+          Prototyped a wearable for real-time biometric monitoring during exercise and movement.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <img src="text_to_object_segmentation_demo.gif" alt="Text to object segmentation demo" width="350" height="225" />
-        <figcaption>Text-to-Object Segmentation</figcaption>
-        <p class="caption muted">
-          Pipeline for semantic object detection using category-specific bounding-box prompts.
+    <article class="project">
+      <div class="project-media">
+        <img src="text_to_object_segmentation_demo.gif" alt="Text-to-Object Segmentation demo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Text-to-Object Segmentation</h3>
+        <p class="muted">
+          Developed a semantic detection pipeline using category-specific bounding-box prompts.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <img src="automated_prompting_demo.png" alt="Automated prompting demo" width="350" height="225" />
-        <figcaption>Automated Prompting for SAM</figcaption>
-        <p class="caption muted">
-          Framework to improve segmentation quality when bounding-box prompts underperform.
+    <article class="project">
+      <div class="project-media">
+        <img src="automated_prompting_demo.png" alt="Automated Prompting for SAM demo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Automated Prompting for SAM</h3>
+        <p class="muted">
+          Created a framework that improves segmentation when standard bounding-box prompts underperform.
         </p>
-      </figure>
+      </div>
+    </article>
 
-      <figure>
-        <img src="driver_risk_recognition_demo.gif" alt="Driver risk recognition demo" width="350" height="225" />
-        <figcaption>Driver Risk Recognition</figcaption>
-        <p class="caption muted">
-          Application for detecting driver unfitness (e.g., drowsiness or poor road scanning).
+    <article class="project">
+      <div class="project-media">
+        <img src="driver_risk_recognition_demo.gif" alt="Driver Risk Recognition demo" />
+      </div>
+      <div class="project-content">
+        <h3 class="project-title">Driver Risk Recognition</h3>
+        <p class="muted">
+          Built a driver-state monitoring system to detect fatigue and unsafe road-scanning behavior.
         </p>
-      </figure>
-    </div>
+      </div>
+    </article>
   </section>
 
   <br />
