@@ -13,46 +13,52 @@
     <img src="phil_circle.png" alt="Phil D." width="225" height="225" />
     <div>
         <h1>Phil D.</h1>
-        <h2>AI Safety Research Engineer</h2>
         <p>
-          AI Safety Research Engineer specializing in adversarial evaluation and scalable ML systems.
+          Research Engineer specializing in evaluation, red-teaming, and safety mitigation of AI systems and frontier models.
           Creator of <a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener noreferrer"><strong>Project Z</strong></a>,
-          a production-grade red-teaming framework that combines adversarial perturbations, multi-signal and reasoning failure
-          classifiers, semantic auditing, and interpretable risk scoring. Experienced in distributed evaluation pipelines,
-          ML infrastructure, and safety-critical perception systems, with additional work in fine-tuning safeguards and
-          safety benchmarks. Pursuing a dual-degree MSE in Robotics and Computer & Information Science at Penn (<a href="https://www.grasp.upenn.edu/" target="_blank" rel="noopener noreferrer">GRASP Lab</a>),
-          graduating May 2026.
+          a production-grade red-teaming framework combining adversarial perturbation testing, multi-signal and reasoning failure
+          classifiers, automated risk scoring, and system auditing for multimodal models.
+          <!--Experienced in designing evaluation metrics, building scalable data pipelines, and developing safety-critical systems
+          with emphasis on robustness under real-world conditions.-->
+          Pursuing a dual-degree MSE in Robotics and Computer & Information Science at the University of Pennsylvania.
         </p>
     </div>
     </header>
-
-  <br />
 
   <!-- Research -->
   <section class="section">
     <h2>Research</h2>
 
     <div class="block">
-      <strong>Creator & Lead Research Engineer — Project Z</strong><br />
+      <strong>Project Z - Automated Red-Teaming &amp; Safety Evaluation Framework for Frontier Models</strong><br />
       (<a href="https://tinyurl.com/36t53km8" target="_blank" rel="noopener">One-page summary</a>)<br />
-      <em>Automated Red-Teaming &amp; Safety Evaluation Framework for Frontier Models</em>
+      <!-- <em>Automated Red-Teaming &amp; Safety Evaluation Framework for Frontier Models</em> -->
       <p class="muted">
-      Developing a production-grade red-teaming framework and reproducible evaluation suite for frontier multimodal models.
-
+      Production-grade red-teaming framework and reproducible evaluation suite for frontier multimodal models,
+      combining adversarial perturbations, multi-signal and reasoning failure classifiers, automated risk scoring,
+      and system auditing for multimodal models.
       </p>
     </div>
 
     <div class="block">
-      <strong>Research Engineer — xLab (Safe Autonomous Systems Lab)</strong><br />
-      <em>University of Pennsylvania</em>
+      <strong>Prompt-based Visual Editing Safety Benchmark</strong><br />
+      <!-- <em>Automated Red-Teaming &amp; Safety Evaluation Framework for Frontier Models</em> -->
       <p class="muted">
-       Designed and built safety-critical perception systems for autonomous forklifts, with a focus on deployment
-       robustness and failure evaluation.
+      Investigating how instruction-guided image editing models (InstructPix2Pix, GPT-5) handle
+      safety-critical prompts. Developing a benchmark to detect autonomy failures—cases where edits
+      unintentionally alter critical elements and objects.
+      </p>
+    </div>
+
+    <div class="block">
+      <strong>Safety-Critical Perception — xLab (Safe Autonomous Systems Lab) / University of Pennsylvania</strong><br />
+      <!-- <em>University of Pennsylvania</em> -->
+      <p class="muted">
+       Safety-critical perception systems for autonomous forklifts, with a focus on deployment robustness
+       and failure evaluation.
       </p>
     </div>
   </section>
-
-  <br />
 
   <!-- Teaching -->
   <section class="section">
@@ -69,32 +75,41 @@
     </div>
   </section>
 
-  <br />
-
   <!-- Awards -->
   <section class="section">
     <h2>Awards</h2>
     <div class="block">
       <strong>TA Award for Excellence (Student-Nominated)</strong> — CIS 5810 Computer Vision &amp; Computational Photography<br />
-      <span class="muted">Summer 2022</span>
+      <!-- <span class="muted">Summer 2022</span> -->
     </div>
   </section>
 
-  <br />
-
   <!-- Selected Projects -->
   <section class="section">
-  <h2>Selected Projects &amp; Demos</h2>
+  <h2>Selected Projects</h2>
 
-    <!-- Project row -->
+    <!-- Text-only project (no GIF) -->
+    <article class="project">
+      <div class="project-media"></div>
+      <div class="project-content">
+        <h3 class="project-title">LLM Safety Mitigation Pipeline (LoRA SFT → DPO-lite → PPO-lite)</h3>
+        <p class="muted">
+          Lightweight safety-training pipeline that teaches consistent refusal behaviors and integrates runtime guardrails for safer language model deployment.
+        </p>
+        <p class="subdesc">
+          Dataset: Anthropic HH | Model: TinyLlama-1.1B | Focus: Refusal alignment & runtime safety
+        </p>
+      </div>
+    </article>
+
+    <!-- Text-only project (no GIF) -->
     <article class="project">
       <div class="project-media">
-        <img src="prompt_editing_benchmark_demo.gif" alt="Prompt editing visual benchmark demo" />
       </div>
       <div class="project-content">
-        <h3 class="project-title">Prompt-based Editing Safety Benchmark</h3>
+        <h3 class="project-title">Safety-Aware Abuse Detection Service (Infrastructure Project)</h3>
         <p class="muted">
-          Built a reproducible benchmark to reveal safety and capability failures in instruction-guided image editing models.
+          Scalable microservice pipeline with ML risk logic, Kubernetes deployment, and full observability for reliable abuse detection.
         </p>
       </div>
     </article>
@@ -109,17 +124,8 @@
       </div>
       <div class="project-content">
         <h3 class="project-title">Real-time Positioning for Robots</h3>
-        <p class="muted">Designed a monocular-camera system for accurate real-time object positioning in robotic environments.</p>
-      </div>
-    </article>
-
-    <!-- Text-only project (no GIF) -->
-    <article class="project">
-      <div class="project-media"></div>
-      <div class="project-content">
-        <h3 class="project-title">LLM Safety Fine-Tuning (LoRA SFT; DPO-ready)</h3>
         <p class="muted">
-          Fine-tuned TinyLlama-1.1B on safety data to strengthen refusals and prepare a lightweight pipeline for DPO.
+          Monocular-camera system for accurate real-time object positioning in robotic environments.
         </p>
       </div>
     </article>
@@ -135,7 +141,7 @@
       <div class="project-content">
         <h3 class="project-title">Lane Detection for Autonomous Vehicles</h3>
         <p class="muted">
-          Trained a transformer model for robust lane segmentation across day and night driving conditions.
+          Transformer-based model for robust lane segmentation across day and night driving conditions.
         </p>
       </div>
     </article>
@@ -147,43 +153,43 @@
       <div class="project-content">
         <h3 class="project-title">VitalTech SmartVest</h3>
         <p class="muted">
-          Prototyped a wearable for real-time biometric monitoring during exercise and movement.
+          Wearable prototype for real-time biometric monitoring during exercise and movement.
         </p>
       </div>
     </article>
 
     <article class="project">
       <div class="project-media">
-        <img src="text_to_object_segmentation_demo.gif" alt="Text-to-Object Segmentation demo" />
+        <img src="text_to_object_segmentation_demo.gif" alt="Text-to-object segmentation demo" />
       </div>
       <div class="project-content">
         <h3 class="project-title">Text-to-Object Segmentation</h3>
         <p class="muted">
-          Developed a semantic detection pipeline using category-specific bounding-box prompts.
+          Semantic detection pipeline using category-specific bounding-box prompts.
         </p>
       </div>
     </article>
 
     <article class="project">
       <div class="project-media">
-        <img src="automated_prompting_demo.png" alt="Automated Prompting for SAM demo" />
+        <img src="automated_prompting_demo.png" alt="Automated prompting for SAM demo" />
       </div>
       <div class="project-content">
         <h3 class="project-title">Automated Prompting for SAM</h3>
         <p class="muted">
-          Created a framework that improves segmentation when standard bounding-box prompts underperform.
+          Framework that improves segmentation when standard bounding-box prompts underperform.
         </p>
       </div>
     </article>
 
     <article class="project">
       <div class="project-media">
-        <img src="driver_risk_recognition_demo.gif" alt="Driver Risk Recognition demo" />
+        <img src="driver_risk_recognition_demo.gif" alt="Driver risk recognition demo" />
       </div>
       <div class="project-content">
         <h3 class="project-title">Driver Risk Recognition</h3>
         <p class="muted">
-          Built a driver-state monitoring system to detect fatigue and unsafe road-scanning behavior.
+          Driver-state monitoring system that detects fatigue and unsafe road-scanning behavior.
         </p>
       </div>
     </article>
@@ -195,7 +201,7 @@
   <section class="section">
     <h2>Misc</h2>
     <p class="muted">
-      I enjoy electronic/metal/punk rock, movies, watching baseball, and exploring neighborhoods (and food).
+      I enjoy music (electronic/metal/punk rock), movies, watching MLB/NFL, and exploring neighborhoods (and food).
     </p>
     <figure class="block">
       <img src="futuristic_city.jpeg" alt="Futuristic city" width="375" height="300" />
