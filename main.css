@@ -14,6 +14,7 @@
 
   --maxw: 980px;
 
+  /* Spacing scale */
   --space-1: 0.25rem;
   --space-2: 0.5rem;
   --space-3: 0.75rem;
@@ -22,11 +23,19 @@
   --space-6: 2rem;
   --space-8: 3rem;
 
-  --fs-0: 0.95rem;
-  --fs-1: 1rem;
-  --fs-2: 1.125rem;
-  --fs-3: 1.5rem;
-  --fs-4: 2rem;
+  /* Typography tokens (base, before scaling) */
+  --fs-0: 0.9rem;   /* small captions */
+  --fs-1: 0.97rem;  /* body */
+  --fs-2: 1.05rem;  /* small heading / h3 */
+  --fs-3: 1.35rem;  /* medium heading */
+  --fs-4: 1.85rem;  /* large heading */
+
+  /* ===== Global type scale (the one knob to size everything) ===== */
+  --type-scale: 0.95; /* 1.00 = default, 0.95 = -5%, 0.90 = -10% */
+
+  /* ===== Section spacing tokens ===== */
+  --section-gap: 4rem;
+  --section-gap-mobile: 3rem;
 }
 
 /* Optional dark theme hook (add class "dark-theme" on <body>) */
@@ -62,36 +71,44 @@ body {
   background: var(--bg);
   color: var(--fg);
   line-height: 1.6;
-  font-size: var(--fs-1);
+  font-size: calc(var(--fs-1) * var(--type-scale));
 }
 
-a {
-  color: var(--accent);
-  text-decoration: none;
-}
+a { color: var(--accent); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
+/* Headings scale with the current --type-scale (global or local) */
 h1, h2, h3 {
   line-height: 1.2;
   margin: 0 0 var(--space-3);
   letter-spacing: -0.01em;
 }
 
-h1 { font-size: clamp(1.8rem, 2.2vw + 1.2rem, 2.4rem); }
-h2 { font-size: clamp(1.35rem, 1.4vw + 1rem, 1.7rem); }
-h3 { font-size: var(--fs-2); margin-top: 0; }
+h1 { font-size: calc(clamp(1.6rem, 1.8vw + 1.1rem, 2.1rem) * var(--type-scale)); }
+h2 { font-size: calc(clamp(1.2rem, 1.1vw + 0.9rem, 1.5rem) * var(--type-scale)); }
+h3 { font-size: calc(var(--fs-2) * var(--type-scale)); }
 
 p { margin: 0 0 var(--space-3); }
-
 .muted { color: var(--muted); }
+
+/* ============== */
+/*  Sections      */
+/* ============== */
 
 .section {
   max-width: var(--maxw);
   margin: 0 auto;
-  padding: 0 var(--space-4);
+  padding-inline: var(--space-4);
+  /* You can locally override type size per section:
+     .section { --type-scale: 0.92; } */
 }
 
-.section + .section { margin-top: var(--space-8); }
+.section + .section { margin-block-start: var(--section-gap); }
+
+.section > h2 {
+  margin-block: 0 var(--space-4);
+  scroll-margin-top: 80px;
+}
 
 /* ================== */
 /*  Hero / Intro      */
@@ -104,6 +121,8 @@ p { margin: 0 0 var(--space-3); }
   display: flex;
   gap: var(--space-5);
   align-items: center;
+  /* Example of local scaling just for hero:
+     --type-scale: 0.98; */
 }
 
 .hero img {
@@ -113,8 +132,8 @@ p { margin: 0 0 var(--space-3); }
 }
 
 .hero h1 { margin-bottom: var(--space-1); }
-.hero h2 { margin-top: -2px; font-size: var(--fs-2); color: var(--muted); font-weight: 600; }
-.hero p { margin-top: var(--space-3); }
+.hero h2 { margin-top: -2px; font-size: calc(var(--fs-2) * var(--type-scale)); color: var(--muted); font-weight: 600; }
+.hero p  { margin-top: var(--space-3); }
 
 /* ================== */
 /*  Blocks / Lists    */
@@ -126,7 +145,6 @@ p { margin: 0 0 var(--space-3); }
 }
 .block:last-child { border-bottom: none; }
 
-/* Keep old .grid styles minimal in case legacy markup remains */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -139,7 +157,7 @@ p { margin: 0 0 var(--space-3); }
   border-radius: var(--radius);
   padding: var(--space-3);
 }
-.caption { font-size: var(--fs-0); }
+.caption { font-size: calc(var(--fs-0) * var(--type-scale)); }
 
 /* ============================ */
 /*  Projects: Left media / Right text */
@@ -155,10 +173,7 @@ p { margin: 0 0 var(--space-3); }
 
 .project:last-child { border-bottom: none; }
 
-.project-media {
-  flex: 0 0 260px;          /* keeps media modest */
-  max-width: 260px;
-}
+.project-media { flex: 0 0 240px; max-width: 240px; }
 
 .project-media img {
   width: 100%;
@@ -170,27 +185,18 @@ p { margin: 0 0 var(--space-3); }
 
 .media-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr; /* stacked GIFs */
   gap: var(--space-2);
 }
 
-.project-content {
-  flex: 1 1 auto;
-  min-width: 0;
-}
-
-.project-title {
-  margin: 0 0 var(--space-2);
-  font-size: var(--fs-2);
-}
+.project-content { flex: 1 1 auto; min-width: 0; }
+.project-title  { margin: 0 0 var(--space-2); font-size: calc(var(--fs-2) * var(--type-scale)); }
 
 /* ================== */
 /*  Misc imagery      */
 /* ================== */
 
-figure.block {
-  margin: var(--space-4) 0 0;
-}
+figure.block { margin: var(--space-4) 0 0; }
 figure.block img {
   width: 100%;
   border-radius: var(--radius);
@@ -212,6 +218,7 @@ figure.block img {
   gap: var(--space-3);
   align-items: center;
   justify-content: flex-start;
+  font-size: calc(var(--fs-0) * var(--type-scale));
 }
 
 /* ================== */
@@ -224,30 +231,45 @@ figure.block img {
 }
 
 @media (max-width: 760px) {
-  .hero {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  .hero img {
-    width: 180px; height: 180px;
-  }
+  :root { --section-gap: var(--section-gap-mobile); }
 
-  .project {
-    flex-direction: column;
-  }
-  .project-media {
-    max-width: 100%;
-    width: 100%;
-  }
-  .media-grid {
-    grid-template-columns: 1fr 1fr; /* Change to 1fr if you prefer single column on mobile */
-  }
+  .hero { flex-direction: column; align-items: flex-start; }
+  .hero img { width: 180px; height: 180px; }
+
+  .project { flex-direction: column; }
+  .project-media { max-width: 100%; width: 100%; }
 
   .grid { grid-template-columns: 1fr; }
 }
 
-/* Small typographic tweaks on very narrow screens */
 @media (max-width: 420px) {
-  body { font-size: 0.96rem; }
-  .project-title { font-size: 1.05rem; }
+  /* keep tiny-phone text a hair smaller overall */
+  :root { --type-scale: 0.93; }
 }
+
+/* Sub description text */
+.subdesc {
+  font-size: calc(0.85rem * var(--type-scale));
+  color: var(--muted);
+  margin-top: 0.25rem;
+}
+
+/* ================== */
+/*  Local Utilities   */
+/* ================== */
+
+/* Local type scaling:
+   Wrap any area with these classes to scale everything inside. */
+.scale-90 { --type-scale: 0.90; }
+.scale-92 { --type-scale: 0.92; }
+.scale-95 { --type-scale: 0.95; }
+.scale-97 { --type-scale: 0.97; }
+.scale-100 { --type-scale: 1.00; }
+
+/* Per-element quick sizes (respect current --type-scale) */
+.text-xs { font-size: calc(0.85rem * var(--type-scale)) !important; }
+.text-sm { font-size: calc(var(--fs-0) * var(--type-scale)) !important; }
+.text-base { font-size: calc(var(--fs-1) * var(--type-scale)) !important; }
+.text-lg { font-size: calc(var(--fs-2) * var(--type-scale)) !important; }
+.text-xl { font-size: calc(var(--fs-3) * var(--type-scale)) !important; }
+.text-2xl { font-size: calc(var(--fs-4) * var(--type-scale)) !important; }
